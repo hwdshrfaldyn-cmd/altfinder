@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AltFinder Global | Smart Savings Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --gold: #D4AF37; --dark: #050505; --card: #111111; }
+        body { font-family: 'Tajawal', 'Montserrat', sans-serif; background-color: var(--dark); color: white; scroll-behavior: smooth; }
+        .gold-gradient { background: linear-gradient(135deg, #D4AF37 0%, #F1D592 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gold-btn { background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); transition: 0.4s; }
+        .gold-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
+        .glass-nav { background: rgba(5, 5, 5, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
+        .ad-box { border: 1px dashed rgba(212, 175, 55, 0.2); background: #080808; text-align: center; color: #333; font-size: 10px; }
+        .product-card { border: 1px solid #222; transition: 0.3s; }
+        .product-card:hover { border-color: var(--gold); }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <nav class="glass-nav sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <span class="text-2xl">🏆</span>
+            <h1 class="text-xl font-bold tracking-widest uppercase gold-gradient">AltFinder Global</h1>
+        </div>
+        <div class="flex items-center gap-4">
+            <select onchange="updateLang(this.value)" class="bg-transparent border border-gray-700 text-xs text-gold rounded-full px-3 py-1 outline-none">
+                <option value="ar" class="bg-black">العربية</option>
+                <option value="en" class="bg-black">English</option>
+                <option value="fr" class="bg-black">Français</option>
+            </select>
+        </div>
+    </nav>
+
+    <div class="ad-box py-2 max-w-4xl mx-auto my-4 rounded">ADSENSE LEADERBOARD</div>
+
+    <header class="relative py-20 px-6 text-center overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-10 pointer-events-none">
+            <svg viewBox="0 0 100 100" class="w-full h-full"><circle cx="50" cy="50" r="40" stroke="#D4AF37" fill="none" stroke-width="0.1"/></svg>
+        </div>
+        <h2 id="heroTitle" class="text-4xl md:text-7xl font-bold mb-6 leading-tight">
+            لا تدفع ثمن العلامة التجارية،<br><span class="gold-gradient">ادفع ثمن الجودة.</span>
+        </h2>
+        <p id="heroSub" class="text-gray-400 text-lg max-w-2xl mx-auto mb-10">نحن المحرك البحثي الأول لاكتشاف البدائل الفاخرة بأسعار ذكية. تم التحقق منها بواسطة خبراء أمازون.</p>
+        <a href="#explore" class="gold-btn text-black font-bold px-10 py-4 rounded-full inline-block">ابدأ التوفير الآن</a>
+    </header>
+
+    <div class="ad-box py-10 max-w-4xl mx-auto mb-10 rounded">ADSENSE NATIVE AD UNIT</div>
+
+    <main id="explore" class="max-w-6xl mx-auto px-6 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
+            <div class="product-card p-6 rounded-2xl bg-[#0f0f0f]">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-[10px] text-gold border border-gold px-2 py-0.5 rounded-full uppercase">Top Choice</span>
+                    <span class="text-green-500 font-bold">-65%</span>
+                </div>
+                <h4 class="text-gray-500 text-xs mb-1 uppercase">Premium Brand</h4>
+                <p class="text-sm mb-4">Apple AirPods Pro</p>
+                <div class="h-[1px] bg-gray-800 mb-4 w-1/2"></div>
+                <h4 class="text-gold text-xs mb-1 uppercase tracking-widest">Smart Alternative</h4>
+                <h3 class="text-xl font-bold mb-4">Soundcore Liberty 4 NC</h3>
+                <a href="https://www.amazon.com/dp/B0C6KFZC9Z?tag=hood2026-20" target="_blank" class="gold-btn block text-center text-black font-bold py-3 rounded-xl shopBtn">اغتنم العرض</a>
+            </div>
+
+            <div class="product-card p-6 rounded-2xl bg-[#0f0f0f]">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-[10px] text-gold border border-gold px-2 py-0.5 rounded-full uppercase">Smart Living</span>
+                    <span class="text-green-500 font-bold">-50%</span>
+                </div>
+                <h4 class="text-gray-500 text-xs mb-1 uppercase">Premium Brand</h4>
+                <p class="text-sm mb-4">Dyson V15 Vacuum</p>
+                <div class="h-[1px] bg-gray-800 mb-4 w-1/2"></div>
+                <h4 class="text-gold text-xs mb-1 uppercase tracking-widest">Smart Alternative</h4>
+                <h3 class="text-xl font-bold mb-4">Tineco Pure One S15</h3>
+                <a href="https://www.amazon.com/dp/B09R1B6J1G?tag=hood2026-20" target="_blank" class="gold-btn block text-center text-black font-bold py-3 rounded-xl shopBtn">اغتنم العرض</a>
+            </div>
+
+            <div class="product-card p-6 rounded-2xl bg-[#0f0f0f]">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-[10px] text-gold border border-gold px-2 py-0.5 rounded-full uppercase">Lifestyle</span>
+                    <span class="text-green-500 font-bold">-40%</span>
+                </div>
+                <h4 class="text-gray-500 text-xs mb-1 uppercase">Premium Brand</h4>
+                <p class="text-sm mb-4">Breville Barista Pro</p>
+                <div class="h-[1px] bg-gray-800 mb-4 w-1/2"></div>
+                <h4 class="text-gold text-xs mb-1 uppercase tracking-widest">Smart Alternative</h4>
+                <h3 class="text-xl font-bold mb-4">Gevi Espresso 20 Bar</h3>
+                <a href="https://www.amazon.com/dp/B0B1M6C2T8?tag=hood2026-20" target="_blank" class="gold-btn block text-center text-black font-bold py-3 rounded-xl shopBtn">اغتنم العرض</a>
+            </div>
+        </div>
+    </main>
+
+    <div class="ad-box py-10 max-w-4xl mx-auto my-10 rounded">ADSENSE FOOTER AD UNIT</div>
+
+    <footer class="bg-black py-20 px-6 border-t border-gray-900 text-center">
+        <h2 class="gold-gradient text-xl font-bold mb-4">ALTFINDER GLOBAL</h2>
+        <p class="text-gray-600 text-xs max-w-lg mx-auto leading-relaxed">
+            As an Amazon Associate, we earn from qualifying purchases. This site is for educational purposes to help consumers find budget-friendly quality alternatives.
+        </p>
+        <div class="mt-8 flex justify-center gap-6 text-gray-500 text-xs">
+            <a href="#" class="hover:text-gold">Privacy Policy</a>
+            <a href="#" class="hover:text-gold">Terms of Service</a>
+            <a href="#" class="hover:text-gold">Contact Us</a>
+        </div>
+    </footer>
+
+    <script>
+        const content = {
+            ar: {
+                heroT: 'لا تدفع ثمن العلامة التجارية،<br><span class="gold-gradient">ادفع ثمن الجودة.</span>',
+                heroS: 'نحن المحرك البحثي الأول لاكتشاف البدائل الفاخرة بأسعار ذكية. تم التحقق منها بواسطة خبراء أمازون.',
+                btn: 'اغتنم العرض',
+                dir: 'rtl'
+            },
+            en: {
+                heroT: 'Don’t Pay for the Label,<br><span class="gold-gradient">Pay for the Quality.</span>',
+                heroS: 'The #1 intelligence engine for discovering luxury alternatives at smart prices. Verified by experts.',
+                btn: 'Get Deal',
+                dir: 'ltr'
+            },
+            fr: {
+                heroT: 'Ne payez pas pour la marque,<br><span class="gold-gradient">payez pour la qualité.</span>',
+                heroS: 'Le premier moteur de recherche pour découvrir des alternatives de luxe à des prix malins.',
+                btn: 'Voir l\'offre',
+                dir: 'ltr'
+            }
+        };
+
+        function updateLang(l) {
+            const d = content[l];
+            document.documentElement.dir = d.dir;
+            document.getElementById('heroTitle').innerHTML = d.heroT;
+            document.getElementById('heroSub').innerText = d.heroS;
+            document.querySelectorAll('.shopBtn').forEach(b => b.innerText = d.btn);
+        }
+    </script>
+</body>
+</html>
