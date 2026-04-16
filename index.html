@@ -3,109 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AltFinder Global | منصة التوفير الذكي</title>
+    <title>AltFinder | ألتفندر</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    
     <style>
-        :root { --gold: #D4AF37; --dark: #050505; }
-        body { font-family: 'Tajawal', sans-serif; background-color: var(--dark); color: white; scroll-behavior: smooth; }
-        .gold-gradient { background: linear-gradient(135deg, #D4AF37 0%, #F1D592 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .gold-btn { background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); transition: 0.4s; color: #000; font-weight: bold; }
-        .gold-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3); }
-        .glass-nav { background: rgba(5, 5, 5, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
-        .product-card { border: 1px solid #1a1a1a; transition: 0.3s; background: #0a0a0a; }
-        .product-card:hover { border-color: var(--gold); background: #111; }
-        .search-input { background: #111; border: 1px solid #333; transition: 0.3s; }
-        .search-input:focus { border-color: var(--gold); outline: none; }
+        body { background-color: #050505; color: white; font-family: sans-serif; }
+        .gold-text { color: #D4AF37; }
+        .gold-bg { background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%); }
     </style>
 </head>
-<body>
-
-    <nav class="glass-nav sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-            <svg width="35" height="35" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 30Q50 0 80 30M30 50L50 80L70 50" stroke="#D4AF37" stroke-width="5" stroke-linecap="round"/>
-                <circle cx="50" cy="50" r="45" stroke="#D4AF37" stroke-width="1" stroke-dasharray="5 5"/>
-            </svg>
-            <h1 class="text-xl font-bold tracking-widest gold-gradient">ALTFINDER</h1>
-        </div>
-
-        <div class="hidden md:flex gap-8 text-xs font-bold uppercase">
-            <a href="#" class="hover:text-gold transition nav-item" data-key="navHome">الرئيسية</a>
-            <a href="#explore" class="hover:text-gold transition nav-item" data-key="navExplore">استكشف</a>
-            <a href="#" class="hover:text-gold transition nav-item" data-key="navDeals">العروض</a>
-        </div>
-
-        <select onchange="updateLang(this.value)" class="bg-black border border-gray-700 text-xs text-gold rounded-full px-4 py-2 outline-none">
-            <option value="ar">العربية</option>
-            <option value="en">English</option>
-        </select>
-    </nav>
-
-    <header class="py-24 px-6 text-center">
-        <h2 id="heroTitle" class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            لا تدفع ثمن العلامة التجارية،<br><span class="gold-gradient">ادفع ثمن الجودة.</span>
-        </h2>
-        <p id="heroSub" class="text-gray-400 text-lg max-w-2xl mx-auto mb-10">المحرك البحثي الأول لاكتشاف البدائل الفاخرة بأسعار ذكية. موثق من خبراء التسوق.</p>
-        
-        <div class="max-w-xl mx-auto mb-12 relative">
-            <input type="text" id="searchInput" placeholder="ابحث عن بديل ذكي..." class="search-input w-full py-4 px-6 rounded-full text-white">
-        </div>
-
-        <a href="#explore" id="mainBtn" class="gold-btn px-12 py-4 rounded-full inline-block">ابدأ التوفير الآن</a>
-    </header>
-
-    <main id="explore" class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="product-card p-8 rounded-3xl">
-            <div class="flex justify-between items-center mb-6">
-                <span class="text-[10px] text-gold border border-gold/30 px-3 py-1 rounded-full">TOP CHOICE</span>
-                <span class="text-green-500 font-bold">-60%</span>
-            </div>
-            <p class="text-gray-500 text-xs mb-1 uppercase">Apple AirPods Pro</p>
-            <div class="h-[1px] bg-gray-800 my-4"></div>
-            <h4 class="text-gold text-xs mb-1 uppercase tracking-widest">Alternative</h4>
-            <h3 class="text-xl font-bold mb-6">Soundcore Liberty 4</h3>
-            <a href="#" class="gold-btn block text-center py-3 rounded-xl shopBtn">اغتنم العرض</a>
-        </div>
-        </main>
-
-    <footer class="py-20 border-t border-gray-900 text-center">
-        <div class="gold-gradient text-2xl font-bold mb-4">ALTFINDER GLOBAL</div>
-        <p id="footerText" class="text-gray-600 text-xs max-w-md mx-auto">بصفتنا شريكاً لأمازون، قد نحصل على عمولة من عمليات الشراء المؤهلة.</p>
-    </footer>
-
-    <script>
-        const langData = {
-            ar: {
-                heroT: 'لا تدفع ثمن العلامة التجارية،<br><span class="gold-gradient">ادفع ثمن الجودة.</span>',
-                heroS: 'المحرك البحثي الأول لاكتشاف البدائل الفاخرة بأسعار ذكية. موثق من خبراء التسوق.',
-                btn: 'اغتنم العرض',
-                search: 'ابحث عن بديل ذكي...',
-                navHome: 'الرئيسية', navExplore: 'استكشف', navDeals: 'العروض',
-                dir: 'rtl'
-            },
-            en: {
-                heroT: 'Don’t Pay for the Label,<br><span class="gold-gradient">Pay for the Quality.</span>',
-                heroS: 'The #1 intelligence engine for discovering luxury alternatives at smart prices.',
-                btn: 'Get Deal',
-                search: 'Search for an alternative...',
-                navHome: 'Home', navExplore: 'Explore', navDeals: 'Deals',
-                dir: 'ltr'
-            }
-        };
-
-        function updateLang(l) {
-            const d = langData[l];
-            document.documentElement.dir = d.dir;
-            document.getElementById('heroTitle').innerHTML = d.heroT;
-            document.getElementById('heroSub').innerText = d.heroS;
-            document.getElementById('searchInput').placeholder = d.search;
-            document.querySelectorAll('.shopBtn').forEach(b => b.innerText = d.btn);
-            document.querySelectorAll('.nav-item').forEach(item => {
-                item.innerText = d[item.getAttribute('data-key')];
-            });
-        }
-    </script>
+<body class="flex flex-col items-center justify-center min-h-screen text-center px-6">
+    <div class="mb-8">
+        <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 30Q50 0 80 30M30 50L50 80L70 50" stroke="#D4AF37" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+    </div>
+    <h1 class="text-4xl font-bold mb-4 gold-text">ALTFINDER GLOBAL</h1>
+    <p class="text-gray-400 mb-8">لا تدفع ثمن العلامة التجارية، ادفع ثمن الجودة.</p>
+    <a href="#" class="gold-bg text-black px-10 py-3 rounded-full font-bold">قريباً: اكتشف البدائل الذكية</a>
 </body>
 </html>
